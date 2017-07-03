@@ -1,0 +1,31 @@
+{
+  "name": "animated-counter",
+  "version": "1.0.0",
+  "description": "a counter effect using CSS animations",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/build-index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sveroude/animated-counter.git"
+  },
+  "keywords": [
+    "animated",
+    "counter",
+    "css",
+    "animations"
+  ],
+  "author": "Sanne Veroude <sanne@voorhoede.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sveroude/animated-counter/issues"
+  },
+  "homepage": "https://github.com/sveroude/animated-counter#readme",
+  "devDependencies": {
+    "nunjucks": "3.0.1"
+  },
+  "dependencies": {
+    "express": "4.15.3"
+  }
+}

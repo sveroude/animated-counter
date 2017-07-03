@@ -1,0 +1,99 @@
+.digit {
+  display: inline-block;
+  height: 1em;
+  line-height: 1em;
+  margin-bottom: 0;
+  overflow: hidden;
+  color: crimson;
+  font-weight: 300;
+}
+
+.digit--animated {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  animation-duration: 6s;
+  animation-timing-function: cubic-bezier(.15,.75,.45,1);
+  animation-iteration-count: infinite;
+}
+
+.keyframes(@name; @arguments) {
+  @keyframes @name {
+    @arguments();
+  }
+}
+
+.topPosition(@digit) {
+  top: @digit;
+}
+
+[data-digit="0"] .digit--animated {
+  animation-name: spin0;
+  .topPosition(0);
+  .keyframes(spin0; { 0% { top: -9em; } 40% { .topPosition(0) } 100% { .topPosition(0) } });
+}
+
+[data-digit="0"] + [data-digit="0"] .digit--animated {
+  animation-name: slowSpin0;
+  .keyframes(slowSpin0; { 0% { top: -3em; } 40% { .topPosition(0) } 100% { .topPosition(0) } });
+}
+
+[data-digit="0"] + [data-digit="0"] + [data-digit="0"] .digit--animated {
+  animation-name: fastSpin0;
+  .keyframes(fastSpin0; { 0% { top: -7em; } 40% { .topPosition(0) } 100% { .topPosition(0) } });
+}
+
+[data-digit="1"] .digit--animated {
+  animation-name: spin1;
+  .topPosition(-1em);
+  .keyframes(spin1; { 0% { top: -9em; } 40% { .topPosition(-1em) } 100% { .topPosition(-1em) } });
+}
+
+[data-digit="2"] .digit--animated {
+  animation-name: spin2;
+  .topPosition(-2em);
+  .keyframes(spin2; { 0% { top: -9em; } 40% { .topPosition(-2em) } 100% { .topPosition(-2em) } });
+}
+
+[data-digit="3"] .digit--animated {
+  animation-name: spin3;
+  .topPosition(-3em);
+  .keyframes(spin3; { 0% { top: -9em; } 40% { .topPosition(-3em) } 100% { .topPosition(-3em) } });
+}
+
+[data-digit="4"] .digit--animated {
+  animation-name: spin4;
+  .topPosition(-4em);
+  .keyframes(spin4; { 0% { top: -9em; } 40% { .topPosition(-4em) } 100% { .topPosition(-4em) } });
+}
+
+[data-digit="5"] .digit--animated {
+  animation-name: spin5;
+  .topPosition(-5em);
+  .keyframes(spin5; { 0% { top: -9em; } 40% { .topPosition(-5em) } 100% { .topPosition(-5em) } });
+}
+
+[data-digit="6"] .digit--animated {
+  animation-name: spin6;
+  .topPosition(-6em);
+  .keyframes(spin6; { 0% { top: -9em; } 40% { .topPosition(-6em) } 100% { .topPosition(-6em) } });
+}
+
+[data-digit="7"] .digit--animated {
+  animation-name: spin7;
+  .topPosition(-7em);
+  .keyframes(spin7; { 0% { top: -9em; } 40% { .topPosition(-7em) } 100% { .topPosition(-7em) } });
+}
+
+[data-digit="8"] .digit--animated {
+  animation-name: spin8;
+  .topPosition(-8em);
+  .keyframes(spin8; { 0% { top: -9em; } 40% { .topPosition(-8em) } 100% { .topPosition(-8em) } });
+}
+
+[data-digit="9"] .digit--animated {
+  animation-name: spin9;
+  .topPosition(-9em);
+  .keyframes(spin9; { 0% { top: 0; } 40% { .topPosition(-9em) } 100% { .topPosition(-9em) } });
+}
