@@ -23,9 +23,8 @@
   },
   "homepage": "https://github.com/sveroude/animated-counter#readme",
   "devDependencies": {
-    "nunjucks": "3.0.1"
-  },
-  "dependencies": {
+    "nunjucks": "3.0.1",
     "express": "4.15.3"
+
   }
 }
